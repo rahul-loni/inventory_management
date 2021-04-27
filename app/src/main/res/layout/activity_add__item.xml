@@ -1,165 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
+    android:background="@drawable/gradient1"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".Add_Item">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:padding="5dip"
-        android:hint="Item Name "
-        android:textSize="20dp"
-        android:textColorHint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-         />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:padding="5dip"
-        android:hint="Product ID "
-        android:textSize="20dp"
-        android:textColorHint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:padding="5dip"
-        android:hint="Brand"
-        android:textSize="20dp"
-        android:textColorHint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:padding="10dp"
-        android:orientation="horizontal"
-        >
-        <EditText
-            android:id="@+id/txtdate"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:hint="DD/MM/YYYY"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColorHint="@color/black"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            app:cardCornerRadius="10dp"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:background="#ffffff"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ok"
-                    android:layout_centerInParent="true"
-                    android:id="@+id/image1"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add Item"
-                    android:background="@android:color/transparent"
 
-                    android:textSize="22dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/image1"/>
-
-                <Button
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent" />
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:padding="5dip"
-        android:hint="Detail"
-        android:textSize="20dp"
-        android:textColorHint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category"
-        android:layout_marginTop="10dp"
-        android:textSize="10dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="10dp"/>
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_height="30dp"
-        android:layout_width="350dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:padding="5dip"
-        android:hint="company"
-        android:textSize="20dp"
-        android:textColorHint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
+        android:id="@+id/textView"
+        android:layout_width="400dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/allura"
+        android:layout_marginLeft="85dp"
+        android:textColor="#C1F8B0B0"
+        android:text="Product Details"
+        android:textSize="65dp"
+        android:textStyle="bold"
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="6dp"
-        android:orientation="horizontal">
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:hint="Price"
-            android:textColorHint="@color/black"
-            android:layout_marginRight="10dp"/>
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:textColorHint="@color/black"
-            android:hint="Qty"/>
 
 
-    </LinearLayout>
-    <Button
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="215dp"
+        android:text="Product "
+        android:textColor="#C1F8B0B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffff"
+        android:layout_marginBottom="-81dp"
+        android:ems="10"
+        android:textColor="#ffff"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <EditText
+        android:id="@+id/edit_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_name"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:layout_marginBottom="-70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Category"
+
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+
+        android:layout_marginBottom="-76dp"
+        android:text="Category "
+        android:textColor="#C1F8B0B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="-60dp"
+        android:text="Price "
+        android:textColor="#C1F8B0B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp"
+
+        android:layout_marginBottom="-56dp"
+        android:text="Number "
+        android:textColor="#C1F8B0B0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_category"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#ffff"
+        android:layout_marginBottom="-70dp"
+        android:ems="10"
+        android:textColor="#ffff"
+        android:inputType="number"
+        android:hint="$5.50"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/bar_codeview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_price"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="-36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        android:hint="Bar/QR Code Number"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bar_codeview"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="-70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Scan Bar/QR Code"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/add_itembuttontodatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_scan"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="-70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="Add Item"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
 
 
-
-
-</LinearLayout>
+</RelativeLayout>

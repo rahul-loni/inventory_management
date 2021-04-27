@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Inventory_Management_System">
-        <activity android:name=".View_Item"></activity>
+        <activity android:name=".ScanCodeActivity"></activity>
+        <activity android:name=".View_Item" />
         <activity android:name=".Edit_Item" />
         <activity android:name=".Add_Item" />
         <activity android:name=".Home" />

@@ -33,6 +33,7 @@
         android:orientation="vertical"
         android:background="#d1c097">
         <EditText
+            android:id="@+id/txtEmailforgot"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:padding="5dip"

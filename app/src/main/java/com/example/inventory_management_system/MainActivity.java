@@ -12,27 +12,33 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-  Button button;
+  Button btn_Login,btn_Signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView=(TextView)findViewById(R.id.text1);
-        textView.setAnimation(AnimationUtils.loadAnimation(MainActivity.this,R.anim.pluse));
+        btn_Login=(Button)findViewById(R.id.Login_btn);
+        btn_Signup=(Button)findViewById(R.id.Sign_btn);
 
-        button=(Button)findViewById(R.id.btn1);
-        button.setOnClickListener(new View.OnClickListener() {
+        btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Animation animation=AnimationUtils.loadAnimation(MainActivity.this,R.anim.fead);
-                button.startAnimation(animation);
-                Intent intent=new Intent(MainActivity.this,Login.class);
-                startActivity(intent);
-
+                Intent intent_Login=new Intent(MainActivity.this,Login.class);
+                startActivity(intent_Login);
             }
         });
+
+        btn_Signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_Signup=new Intent(MainActivity.this,Signup.class);
+                startActivity(intent_Signup);
+            }
+        });
+
+
 
 
 
