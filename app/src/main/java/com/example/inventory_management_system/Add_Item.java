@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Add_Item extends AppCompatActivity {
     private EditText product_Name,product_Category,product_Price;
-    private Button btn_sconBarCod,btn_Add;
+    private Button btn_sconBarCode,btn_Add;
     private TextView itembarcode;
     public static TextView resulttextview;
     private FirebaseAuth firebaseAuth;
@@ -40,15 +40,14 @@ public class Add_Item extends AppCompatActivity {
         product_Price=(EditText)findViewById(R.id.edit_price);
 
         btn_Add=(Button)findViewById(R.id.add_itembuttontodatabase);
-        btn_sconBarCod=(Button)findViewById(R.id.button_scan);
+        btn_sconBarCode=(Button)findViewById(R.id.button_scan);
         itembarcode= findViewById(R.id.bar_codeview);
         resulttextview = findViewById(R.id.bar_codeview);
 
-
-        btn_sconBarCod.setOnClickListener(new View.OnClickListener() {
+        btn_sconBarCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ScanCodeActivity.class));
+                startActivity(new Intent(getApplicationContext(),ScanCodeActivity.class));
             }
         });
         btn_Add.setOnClickListener(new View.OnClickListener() {
@@ -58,34 +57,37 @@ public class Add_Item extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void additem() {
-        String itemnameValue = product_Name.getText().toString();
-        String itemcategoryValue = product_Category.getText().toString();
-        String itempriceValue = product_Price.getText().toString();
-        String itembarcodeValue = itembarcode.getText().toString();
-        final FirebaseUser users = firebaseAuth.getCurrentUser();
+        String itemnameValue=product_Name.getText().toString();
+        String itemcategoryValue=product_Category.getText().toString();
+        String itempriceValue=product_Price.getText().toString();
+        String itembarcodeValue=itembarcode.getText().toString();
+        final FirebaseUser users=firebaseAuth.getCurrentUser();
         String finaluser=users.getEmail();
-        String resultemail = finaluser.replace(".","");
+        String resultemail=finaluser.replace("","");
 
-
-        if (itembarcodeValue.isEmpty()) {
-            itembarcode.setError("It's Empty");
+        if (itembarcodeValue.isEmpty()){
+            itembarcode.setError("its Empty");
             itembarcode.requestFocus();
             return;
-        }
-        if(!TextUtils.isEmpty(itemnameValue)&&!TextUtils.isEmpty(itemcategoryValue)&&!TextUtils.isEmpty(itempriceValue)){
 
-            Items items = new Items(itemnameValue,itemcategoryValue,itempriceValue,itembarcodeValue);
+        }
+        if (!TextUtils.isEmpty(itemnameValue)&&!TextUtils.isEmpty(itemcategoryValue)&&
+        !TextUtils.isEmpty(itempriceValue)){
+            Items items=new Items(itemnameValue,itemcategoryValue,itempriceValue,itembarcodeValue);
             databaseReference.child(resultemail).child("Items").child(itembarcodeValue).setValue(items);
-            databaseReferencecat.child(resultemail).child("ItemByCategory").child(itemcategoryValue).child(itembarcodeValue).setValue(items);
+            databaseReference.child(resultemail).child("ItemByCategory").child(itembarcodeValue).
+                    setValue(items);
             product_Name.setText("");
             itembarcode.setText("");
             product_Price.setText("");
             itembarcode.setText("");
-            Toast.makeText(Add_Item.this,itemnameValue+" Added",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show();
+            
+            
         }
+
     }
 }
