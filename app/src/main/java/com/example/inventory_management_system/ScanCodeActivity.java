@@ -15,7 +15,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
-    private static final int My_PERMISSIONS_REQUEST_CAMERA =0;
+     int My_PERMISSIONS_REQUEST_CAMERA =0;
     ZXingScannerView ScannerView;
 
     @Override
@@ -45,7 +45,7 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
         != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
-                    My_PERMISSIONS_REQUEST_CAMERA);
+                    My_PERMISSIONS_REQUEST_CAMERA=0);
 
         }
         ScannerView.setResultHandler(this);

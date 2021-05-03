@@ -88,6 +88,9 @@ public class Add_Item extends AppCompatActivity {
             
             
         }
+        else {
+            Toast.makeText(Add_Item.this,"Please Fill all the fields",Toast.LENGTH_SHORT).show();
+        }
 
     }
 }
