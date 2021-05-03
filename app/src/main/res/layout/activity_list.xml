@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_end_color"
+    android:padding="5dp"
+    app:cardCornerRadius="10dp"
+    tools:context=".List">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#987678"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/viewitembarcodename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Barcode"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@id/viewitembarcodename"
+            />
+        <TextView
+            android:id="@+id/viewitemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/viewitemname"
+            />
+        <TextView
+            android:id="@+id/viewitemcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item category"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/viewitemcategory"
+            />
+        <TextView
+            android:id="@+id/viewitemprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Price"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@id/viewitemprice"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
